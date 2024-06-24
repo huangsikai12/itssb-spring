@@ -1,0 +1,19 @@
+<!-- UserMapper.xml -->
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+    <!-- 查询用户 by id -->
+    <select id="getUserById" resultType="com.example.demo.pojo.User">
+        SELECT * FROM t_user WHERE id = #{id}
+    </select>
+
+    <!-- 查询用户 by name -->
+    <select id="getUserByInfo" resultType="com.example.demo.pojo.User">
+        SELECT * FROM t_user WHERE name = #{name} and password =#{password}
+    </select>
+
+</mapper>

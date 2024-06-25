@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8088
 mybatis:
   mapper-locations: classpath:mappers/*xml
 
@@ -9,3 +9,11 @@ spring:
     url: jdbc:mysql://u.huangsikai.top:3306/itssb_know?useSSL=false&serverTimezone=UTC
     username: root
     password: hsk040722
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+minio:
+  endpoint: http://u.huangsikai.top:9000
+  accessKey: minioadmin
+  secretKey: minioadmin

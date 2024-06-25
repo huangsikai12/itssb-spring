@@ -19,6 +19,12 @@
             <artifactId>okhttp</artifactId>
             <version>4.10.0</version>
         </dependency>
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>8.3.6</version> <!-- 请检查最新版本 -->
+        </dependency>
+
 
         <dependency>
             <groupId>com.alibaba</groupId>

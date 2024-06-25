@@ -1,0 +1,18 @@
+<!-- UserMapper.xml -->
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.TrainLogMapper">
+
+    <!-- 查询用户 by id -->
+    <select id="getAllTrainLog" resultType="com.example.demo.pojo.TrainLog">
+        SELECT * FROM t_filelog
+    </select>
+    <insert id="setTrainLog">
+        insert into t_filelog(file_name,content,user_name,date) values(#{file_name},#{content},#{user_name},#{date})
+    </insert>
+
+
+</mapper>

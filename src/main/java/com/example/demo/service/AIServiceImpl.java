@@ -34,8 +34,6 @@ public class AIServiceImpl implements AIService{
                 .resultFormat(GenerationParam.ResultFormat.MESSAGE)
                 .topP(0.8)
                 .build();
-
         return gen.call(param).getOutput().getChoices().get(0).getMessage().getContent();
-
     }
 }

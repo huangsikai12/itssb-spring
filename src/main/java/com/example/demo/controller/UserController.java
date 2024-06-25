@@ -17,14 +17,14 @@ public class UserController {
 
 
     @PostMapping("/login")
-    public Result<Integer> Login(@RequestBody User user)
+    public Result<User> Login(@RequestBody User user)
     {
         User u = userService.getUserByInfo(user);
         if (u!=null)
         {
-            return new Result<Integer>(200,"登陆成功",1);
+            return new Result<User>(200,"登陆成功",new User(u.getId(),u.getName(),""));
 
         }
-        return new Result<Integer>(404,"登陆失败",-1);
+        return new Result<User>(404,"登陆失败",null);
     }
 }

@@ -1,0 +1,14 @@
+<!-- UserMapper.xml -->
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.StudyArticleMapper">
+
+    <!-- 查询文章 by type -->
+    <select id="getArticleByType" resultType="com.example.demo.pojo.StudyArticle">
+        SELECT * FROM t_studyarticle where type = #{type}
+    </select>
+
+</mapper>

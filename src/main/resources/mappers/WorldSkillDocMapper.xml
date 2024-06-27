@@ -1,0 +1,18 @@
+<!-- UserMapper.xml -->
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.mapper.WorldSkillDocMapper">
+
+    <!-- 查询用户 by id -->
+    <select id="getAllDoc" resultType="com.example.demo.pojo.WorldSkillDoc">
+        SELECT * FROM t_worldskillsdoc
+    </select>
+    <insert id="setDoc">
+        insert into t_worldskillsdoc(file_name,full_name,is_parent) values(#{file_name},#{full_name},#{is_parent})
+    </insert>
+
+
+</mapper>
